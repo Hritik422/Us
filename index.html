@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>This one is for my Cutieeee</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+	<div class="heart-container"></div>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			
+			Hey Girl !<br />
+			Do you remember the day we first met?<br />
+			<span class="comments"> </span><br />
+			Since that day a spark begun;<br />
+			<span class="comments"></span><br />
+			Your everything got imprinted in my heart;<br />
+			As the time went on;<br />
+			The Bond grew stronger and stronger;<br />
+			Journey from being friends to the love of my life;<br />
+			We have traveled a long way together;<br />
+			There have been fights ;<br />
+			<span class="comments">// And I'm sure there will be more.</span><br />
+			But our Bond will always grow back Stronger;<br />
+			Happy 4th Anniversary, my dearest! 💖 <br/>
+
+I can hardly believe it's been four years since we started<br/>
+this beautiful journey together.<br/>
+ Every moment spent with you has been a blessing,<br/>
+  and I feel so incredibly lucky to have you by my side.<br/>
+   You make my world brighter, and I treasure all the laughter,<br/>
+    the late-night talks, the little gestures,<br/>
+	 and everything we’ve shared.<br/>
+	 I MISS YOU BHTTTTTT SARAAAAAAA ..... <br/>
+	 Meeetttt Meee Soonnnnnnn <br/>
+			<br>
+			<br>
+			All I want to say is:<br />
+			Baby, I will love you forever;<br />
+			<br>
+			<br>
+			Now If you want to hug me you can touch the heart below<br />
+			<br>
+			<span id="heartspan">
+			<a href="image1.jpeg"><i class="fas fa-heart" id="icon">💓</i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					I LOVE YOU SO MUCH<br/>
+					<div class="signature">- Your Puchu</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2021, 8, 5);
+together.setHours(16);
+together.setMinutes(30);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+const heartContainer = document.querySelector('.heart-container');
+
+function createHeart() {
+  const heart = document.createElement('div');
+  heart.classList.add('heart');
+  
+  // Random position
+  heart.style.left = `${Math.random() * 100}vw`;
+  heart.style.animationDuration = `${Math.random() * 2 + 3}s`; // Random fall speed
+
+  heartContainer.appendChild(heart);
+
+  // Remove heart after animation ends
+  heart.addEventListener('animationend', () => {
+    heart.remove();
+  });
+}
+
+// Create hearts continuously
+setInterval(createHeart, 1000); // Create a new heart every 200ms
+
+</script>
+</body>
+</html>

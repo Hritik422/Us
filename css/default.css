@@ -1,0 +1,89 @@
+﻿body{margin:0;padding:0;;font-size:12px;overflow:auto;background:#ffe;
+    /* background-size: cover;
+    background:#ffe
+    background-position: center;
+    background-repeat: no-repeat; */
+    position: relative;
+}
+#mainDiv{width:100%;height:100%}
+#loveHeart{float:left;width:670px;height:625px}
+#garden{width:100%;height:100%}
+#elapseClock{text-align:right;font-size:18px;margin-top:10px;margin-bottom:10px}
+#words{font-family:"sans-serif";width:500px;font-size:24px;color:#666}
+#messages{display:none;text-align: center;font-size: 30px}
+#elapseClock .digit{font-family:"digit";font-size:40px;text-align: center;}
+#loveu{padding:5px;font-size:22px;margin-top:80px;margin-right:120px;text-align:right;display:none}
+#loveu .signature{margin-top:10px;font-size:20px;font-style:italic}
+#clickSound{display:none}
+#code{float:left;width:440px;height:400px;color:#333;font-family:"Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";font-size:12px}
+#code .string{color:#2a36ff}
+#code .keyword{color:#7f0055;font-weight:bold}
+#code .placeholder{margin-left:15px}#code .space{margin-left:7px}
+#code .comments{color:#3f7f5f}
+#copyright{margin-top:10px;text-align:center;width:100%;color:#666}
+#errorMsg{width:100%;text-align:center;font-size:24px;position:absolute;top:100px;left:0}
+#copyright a{color:#666}
+#icon{font-size: 48px;color: red;margin: 50 px; align-content: center;}
+#heartspan{align-content: center;text-align: center;margin: 20px;}
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    background-image: url('../img2.jpeg');
+    background-size: contain; /* Ensures the whole image is visible */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    opacity: 0.5; /* Adjust for transparency */
+    z-index: -1; /* Keeps the image behind your content */
+  }
+  .heart-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .heart {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    transform: rotate(45deg);
+    opacity: 0;
+    animation: fall 3s infinite;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+  }
+  
+  .heart::before {
+    top: -15px;
+    left: 0;
+  }
+  
+  .heart::after {
+    left: 15px;
+    top: 0;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-100px) rotate(45deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(45deg);
+      opacity: 0;
+    }
+  }
